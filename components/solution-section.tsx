@@ -73,14 +73,16 @@ export function SolutionSection() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-2xl overflow-hidden">
-          <Image
-            src="/images/team-collaboration.jpg"
-            alt={lang === "es" ? "Equipo colaborando en operaciones empresariales" : "Team collaborating on business operations"}
-            width={1200}
-            height={600}
-            className="w-full h-auto object-cover"
-          />
+        <div className="mt-16 flex justify-center">
+          <div className="rounded-2xl overflow-hidden max-w-md">
+            <Image
+              src="/images/team-collaboration.jpg"
+              alt={lang === "es" ? "Equipo tech colaborando" : "Tech team collaborating"}
+              width={400}
+              height={280}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

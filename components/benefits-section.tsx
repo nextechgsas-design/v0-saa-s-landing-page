@@ -65,12 +65,12 @@ export function BenefitsSection() {
                 : "Companies that centralize their operations with NEXTECH gain clarity, order, and ability to scale."}
             </p>
           </div>
-          <div className="rounded-2xl overflow-hidden">
+          <div className="rounded-2xl overflow-hidden max-w-sm ml-auto">
             <Image
               src="/images/business-meeting.jpg"
-              alt={lang === "es" ? "Reunión de negocios profesional" : "Professional business meeting"}
-              width={600}
-              height={400}
+              alt={lang === "es" ? "Equipo tech en reunión" : "Tech team meeting"}
+              width={360}
+              height={240}
               className="w-full h-auto object-cover"
             />
           </div>

@@ -62,12 +62,12 @@ export function HowItWorksSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl overflow-hidden border border-border">
+          <div className="rounded-2xl overflow-hidden border border-border max-w-sm">
             <Image
               src="/images/dashboard-screen.jpg"
               alt={lang === "es" ? "Dashboard de gestión de operaciones" : "Operations management dashboard"}
-              width={600}
-              height={400}
+              width={360}
+              height={240}
               className="w-full h-auto object-cover"
             />
           </div>
