@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 
 export function BenefitsSection() {
@@ -52,28 +51,17 @@ export function BenefitsSection() {
           {lang === "es" ? "Beneficios" : "Benefits"}
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-background text-balance mb-6">
-              {lang === "es"
-                ? "Resultados concretos para tu operación"
-                : "Concrete results for your operation"}
-            </h2>
-            <p className="text-background/70 leading-relaxed text-lg">
-              {lang === "es"
-                ? "Empresas que centralizan su operación con NEXTECH ganan en claridad, orden y capacidad de escalar."
-                : "Companies that centralize their operations with NEXTECH gain clarity, order, and ability to scale."}
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden max-w-sm ml-auto">
-            <Image
-              src="/images/business-meeting.jpg"
-              alt={lang === "es" ? "Equipo tech en reunión" : "Tech team meeting"}
-              width={360}
-              height={240}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-end mb-16">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-background text-balance">
+            {lang === "es"
+              ? "Resultados concretos para tu operación"
+              : "Concrete results for your operation"}
+          </h2>
+          <p className="text-background/70 leading-relaxed text-lg">
+            {lang === "es"
+              ? "Empresas que centralizan su operación con NEXTECH ganan en claridad, orden y capacidad de escalar."
+              : "Companies that centralize their operations with NEXTECH gain clarity, order, and ability to scale."}
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-background/10 rounded-2xl overflow-hidden">

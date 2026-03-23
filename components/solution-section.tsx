@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Users, SlidersHorizontal, LayoutGrid } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
@@ -73,17 +72,6 @@ export function SolutionSection() {
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <div className="rounded-2xl overflow-hidden max-w-md">
-            <Image
-              src="/images/team-collaboration.jpg"
-              alt={lang === "es" ? "Equipo tech colaborando" : "Tech team collaborating"}
-              width={400}
-              height={280}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
       </div>
     </section>
   )
