@@ -1,22 +1,22 @@
 const useCases = [
   {
     industry: "Viajes",
-    description: "Gestiona pagos a hoteles, guías y transporte en cada operación turística.",
+    description: "Organiza proveedores como hoteles, guías y transporte en cada operación turística.",
     tags: ["Hoteles", "Guías", "Transporte"],
   },
   {
     industry: "Marketing",
-    description: "Centraliza pagos a creadores de contenido, agencias y plataformas.",
+    description: "Gestiona creadores, equipos y colaboradores en cada campaña de forma clara.",
     tags: ["Creadores", "Plataformas", "Agencias"],
   },
   {
     industry: "Construcción",
-    description: "Administra contratistas, subcontratistas y proveedores de materiales.",
+    description: "Controla contratistas, subcontratistas y proveedores en cada proyecto.",
     tags: ["Contratistas", "Materiales", "Equipos"],
   },
   {
     industry: "Inmobiliaria",
-    description: "Organiza pagos de mantenimiento, administración y servicios por propiedad.",
+    description: "Administra proveedores de mantenimiento, servicios y operación por propiedad.",
     tags: ["Mantenimiento", "Administración", "Servicios"],
   },
 ]
