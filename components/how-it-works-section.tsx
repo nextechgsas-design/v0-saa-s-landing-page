@@ -1,45 +1,62 @@
-const steps = [
-  {
-    number: "01",
-    title: "Crea tu operación",
-    description:
-      "Define el proyecto o proceso que quieres gestionar. Agrega un nombre, contexto y fecha de inicio.",
-  },
-  {
-    number: "02",
-    title: "Agrega proveedores",
-    description:
-      "Incluye todos los proveedores, equipos o personas involucradas en la operación.",
-  },
-  {
-    number: "03",
-    title: "Define valores",
-    description:
-      "Asigna el valor correspondiente a cada proveedor. La plataforma calcula totales y pendientes automáticamente.",
-  },
-  {
-    number: "04",
-    title: "Visualiza todo",
-    description:
-      "Accede a un panel claro con el estado de cada operación, proveedor y pago en tiempo real.",
-  },
-]
+"use client"
+
+import { useLanguage } from "@/lib/language-context"
 
 export function HowItWorksSection() {
+  const { lang } = useLanguage()
+
+  const steps = [
+    {
+      number: "01",
+      title: { es: "Crea tu operación", en: "Create your operation" },
+      description: {
+        es: "Define el proyecto o proceso que quieres gestionar. Agrega un nombre, contexto y fecha de inicio.",
+        en: "Define the project or process you want to manage. Add a name, context, and start date.",
+      },
+    },
+    {
+      number: "02",
+      title: { es: "Agrega proveedores", en: "Add vendors" },
+      description: {
+        es: "Incluye todos los proveedores, equipos o personas involucradas en la operación.",
+        en: "Include all vendors, teams, or people involved in the operation.",
+      },
+    },
+    {
+      number: "03",
+      title: { es: "Define valores", en: "Define values" },
+      description: {
+        es: "Asigna el valor correspondiente a cada proveedor. La plataforma calcula totales y pendientes automáticamente.",
+        en: "Assign the corresponding value to each vendor. The platform calculates totals and pending amounts automatically.",
+      },
+    },
+    {
+      number: "04",
+      title: { es: "Visualiza todo", en: "Visualize everything" },
+      description: {
+        es: "Accede a un panel claro con el estado de cada operación, proveedor y pago en tiempo real.",
+        en: "Access a clear dashboard with the status of each operation, vendor, and payment in real time.",
+      },
+    },
+  ]
+
   return (
     <section id="como-funciona" className="py-24 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto">
         <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-4">
-          Cómo funciona
+          {lang === "es" ? "Cómo funciona" : "How It Works"}
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 items-end mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-            Configura tu operación en cuatro pasos
+            {lang === "es"
+              ? "Configura tu operación en cuatro pasos"
+              : "Configure your operation in four steps"}
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Sin curva de aprendizaje. Sin configuraciones complejas. Solo ingresa tus datos
-            y empieza a tener claridad.
+            {lang === "es"
+              ? "Sin curva de aprendizaje. Sin configuraciones complejas. Solo ingresa tus datos y empieza a tener claridad."
+              : "No learning curve. No complex configurations. Just enter your data and start gaining clarity."}
           </p>
         </div>
 
@@ -50,8 +67,12 @@ export function HowItWorksSection() {
                 {number}
               </span>
               <div className="w-full h-px bg-border" />
-              <h3 className="font-semibold text-foreground">{title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+              <h3 className="font-semibold text-foreground">
+                {lang === "es" ? title.es : title.en}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {lang === "es" ? description.es : description.en}
+              </p>
             </div>
           ))}
         </div>

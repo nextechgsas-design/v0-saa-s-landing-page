@@ -2,16 +2,18 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-
-const navLinks = [
-  { label: "Solución", href: "#solucion" },
-  { label: "Casos de uso", href: "#casos" },
-  { label: "Cómo funciona", href: "#como-funciona" },
-  { label: "Empresa", href: "#empresa" },
-]
+import { useLanguage } from "@/lib/language-context"
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const { lang, setLang } = useLanguage()
+
+  const navLinks = [
+    { label: lang === "es" ? "Solución" : "Solution", href: "#solucion" },
+    { label: lang === "es" ? "Casos de uso" : "Use Cases", href: "#casos" },
+    { label: lang === "es" ? "Cómo funciona" : "How It Works", href: "#como-funciona" },
+    { label: lang === "es" ? "Empresa" : "Company", href: "#empresa" },
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
@@ -34,13 +36,40 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <a
-          href="#contacto"
-          className="hidden md:inline-flex items-center bg-foreground text-background text-sm font-medium px-5 py-2.5 rounded-full hover:opacity-80 transition-opacity"
-        >
-          Solicitar acceso
-        </a>
+        {/* Right side: Lang switcher + CTA */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Language switcher */}
+          <div className="flex items-center border border-border rounded-full overflow-hidden text-xs font-medium">
+            <button
+              onClick={() => setLang("es")}
+              className={`px-3 py-1.5 transition-colors ${
+                lang === "es"
+                  ? "bg-foreground text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              ES
+            </button>
+            <button
+              onClick={() => setLang("en")}
+              className={`px-3 py-1.5 transition-colors ${
+                lang === "en"
+                  ? "bg-foreground text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
+          {/* CTA */}
+          <a
+            href="#contacto"
+            className="inline-flex items-center bg-foreground text-background text-sm font-medium px-5 py-2.5 rounded-full hover:opacity-80 transition-opacity"
+          >
+            {lang === "es" ? "Solicitar demo" : "Request Demo"}
+          </a>
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -55,6 +84,27 @@ export function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-4">
+          {/* Mobile lang switcher */}
+          <div className="flex items-center gap-2 pb-2 border-b border-border mb-2">
+            <button
+              onClick={() => setLang("es")}
+              className={`text-sm font-medium ${
+                lang === "es" ? "text-foreground" : "text-muted-foreground"
+              }`}
+            >
+              ES
+            </button>
+            <span className="text-muted-foreground">|</span>
+            <button
+              onClick={() => setLang("en")}
+              className={`text-sm font-medium ${
+                lang === "en" ? "text-foreground" : "text-muted-foreground"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -70,7 +120,7 @@ export function Navbar() {
             className="inline-flex items-center justify-center bg-foreground text-background text-sm font-medium px-5 py-2.5 rounded-full mt-2"
             onClick={() => setOpen(false)}
           >
-            Solicitar acceso
+            {lang === "es" ? "Solicitar demo" : "Request Demo"}
           </a>
         </div>
       )}

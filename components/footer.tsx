@@ -1,12 +1,18 @@
-const footerLinks = [
-  { label: "Solución", href: "#solucion" },
-  { label: "Casos de uso", href: "#casos" },
-  { label: "Cómo funciona", href: "#como-funciona" },
-  { label: "Empresa", href: "#empresa" },
-  { label: "Contacto", href: "#contacto" },
-]
+"use client"
+
+import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
+  const { lang } = useLanguage()
+
+  const footerLinks = [
+    { label: { es: "Solución", en: "Solution" }, href: "#solucion" },
+    { label: { es: "Casos de uso", en: "Use Cases" }, href: "#casos" },
+    { label: { es: "Cómo funciona", en: "How It Works" }, href: "#como-funciona" },
+    { label: { es: "Empresa", en: "Company" }, href: "#empresa" },
+    { label: { es: "Contacto", en: "Contact" }, href: "#contacto" },
+  ]
+
   return (
     <footer id="empresa" className="border-t border-border py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -23,7 +29,7 @@ export function Footer() {
               href={link.href}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              {link.label}
+              {lang === "es" ? link.label.es : link.label.en}
             </a>
           ))}
         </nav>

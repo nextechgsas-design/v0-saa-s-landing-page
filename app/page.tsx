@@ -1,5 +1,9 @@
+"use client"
+
+import { LanguageProvider } from "@/lib/language-context"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
+import { FlowDiagram } from "@/components/flow-diagram"
 import { ProblemSection } from "@/components/problem-section"
 import { SolutionSection } from "@/components/solution-section"
 import { AutomationSection } from "@/components/automation-section"
@@ -11,17 +15,20 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <AutomationSection />
-      <UseCasesSection />
-      <HowItWorksSection />
-      <BenefitsSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main>
+        <Navbar />
+        <HeroSection />
+        <FlowDiagram />
+        <ProblemSection />
+        <SolutionSection />
+        <AutomationSection />
+        <UseCasesSection />
+        <HowItWorksSection />
+        <BenefitsSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </LanguageProvider>
   )
 }
