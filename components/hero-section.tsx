@@ -46,9 +46,9 @@ export function HeroSection() {
         </div>
 
         {/* Images */}
-        <div className="hidden lg:block relative h-[480px]">
-          {/* iMac — top left */}
-          <div className="absolute top-0 left-0 w-[68%] rounded-2xl overflow-hidden shadow-xl border border-border">
+        <div className="hidden lg:block relative h-[380px]">
+          {/* iMac — solo imagen */}
+          <div className="absolute top-0 left-0 w-full rounded-2xl overflow-hidden shadow-xl border border-border">
             <Image
               src="/images/dashboard-imac.jpg"
               alt={lang === "es" ? "Dashboard de operaciones en iMac" : "Operations dashboard on iMac"}
@@ -56,16 +56,6 @@ export function HeroSection() {
               height={360}
               className="w-full h-auto object-cover"
               priority
-            />
-          </div>
-          {/* Team — bottom right, overlapping */}
-          <div className="absolute bottom-0 right-0 w-[62%] rounded-2xl overflow-hidden shadow-xl border border-border">
-            <Image
-              src="/images/team-dashboard.jpg"
-              alt={lang === "es" ? "Equipo revisando el dashboard" : "Team reviewing dashboard"}
-              width={480}
-              height={320}
-              className="w-full h-auto object-cover"
             />
           </div>
         </div>

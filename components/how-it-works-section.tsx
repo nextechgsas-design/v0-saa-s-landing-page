@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 
 export function HowItWorksSection() {
@@ -47,17 +48,28 @@ export function HowItWorksSection() {
           {lang === "es" ? "Cómo funciona" : "How It Works"}
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-end mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-            {lang === "es"
-              ? "Configura tu operación en cuatro pasos"
-              : "Configure your operation in four steps"}
-          </h2>
-          <p className="text-muted-foreground leading-relaxed text-lg">
-            {lang === "es"
-              ? "Sin curva de aprendizaje. Sin configuraciones complejas. Solo ingresa tus datos y empieza a tener claridad."
-              : "No learning curve. No complex configurations. Just enter your data and start gaining clarity."}
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance mb-4">
+              {lang === "es"
+                ? "Configura tu operación en cuatro pasos"
+                : "Configure your operation in four steps"}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              {lang === "es"
+                ? "Sin curva de aprendizaje. Sin configuraciones complejas. Solo ingresa tus datos y empieza a tener claridad."
+                : "No learning curve. No complex configurations. Just enter your data and start gaining clarity."}
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-md border border-border">
+            <Image
+              src="/images/team-dashboard.jpg"
+              alt={lang === "es" ? "Equipo revisando el dashboard en tiempo real" : "Team reviewing dashboard in real time"}
+              width={560}
+              height={380}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
