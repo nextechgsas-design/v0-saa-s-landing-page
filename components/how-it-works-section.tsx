@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 
 export function HowItWorksSection() {
@@ -60,21 +61,32 @@ export function HowItWorksSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map(({ number, title, description }) => (
-            <div key={number} className="flex flex-col gap-4">
-              <span className="text-4xl font-bold text-muted-foreground/20 font-mono tracking-tight">
-                {number}
-              </span>
-              <div className="w-full h-px bg-border" />
-              <h3 className="font-semibold text-foreground">
-                {lang === "es" ? title.es : title.en}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {lang === "es" ? description.es : description.en}
-              </p>
-            </div>
-          ))}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="rounded-2xl overflow-hidden border border-border">
+            <Image
+              src="/images/dashboard-screen.jpg"
+              alt={lang === "es" ? "Dashboard de gestión de operaciones" : "Operations management dashboard"}
+              width={600}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {steps.map(({ number, title, description }) => (
+              <div key={number} className="flex flex-col gap-4">
+                <span className="text-4xl font-bold text-muted-foreground/20 font-mono tracking-tight">
+                  {number}
+                </span>
+                <div className="w-full h-px bg-border" />
+                <h3 className="font-semibold text-foreground">
+                  {lang === "es" ? title.es : title.en}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {lang === "es" ? description.es : description.en}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
