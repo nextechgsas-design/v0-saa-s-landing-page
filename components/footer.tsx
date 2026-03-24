@@ -18,7 +18,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand */}
         <a href="#" className="text-foreground font-semibold text-lg tracking-tight">
-          NEXTECH
+          NODONEXT
         </a>
 
         {/* Links */}
