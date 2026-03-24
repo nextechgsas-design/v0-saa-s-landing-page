@@ -120,7 +120,7 @@ export function Navbar() {
             className="inline-flex items-center justify-center bg-foreground text-background text-sm font-medium px-5 py-2.5 rounded-full mt-2"
             onClick={() => setOpen(false)}
           >
-            {lang === "es" ? "Empezar ahora" : "Start now"}
+            {lang === "es" ? "Agendar una cita" : "Schedule a call"}
           </a>
         </div>
       )}
