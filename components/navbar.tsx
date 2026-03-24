@@ -67,7 +67,7 @@ export function Navbar() {
             href="#contacto"
             className="inline-flex items-center bg-foreground text-background text-sm font-medium px-5 py-2.5 rounded-full hover:opacity-80 transition-opacity"
           >
-            {lang === "es" ? "Empezar ahora" : "Start Now"}
+            {lang === "es" ? "Agendar una cita" : "Schedule a call"}
           </a>
         </div>
 
