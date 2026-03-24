@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="text-foreground font-semibold text-lg tracking-tight">
-          NEXTECH
+          NODONEXT
         </a>
 
         {/* Desktop nav */}
@@ -67,7 +67,7 @@ export function Navbar() {
             href="#contacto"
             className="inline-flex items-center bg-foreground text-background text-sm font-medium px-5 py-2.5 rounded-full hover:opacity-80 transition-opacity"
           >
-            {lang === "es" ? "Solicitar demo" : "Request Demo"}
+            {lang === "es" ? "Empezar ahora" : "Start Now"}
           </a>
         </div>
 
