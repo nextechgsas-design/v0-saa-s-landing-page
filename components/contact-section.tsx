@@ -51,8 +51,8 @@ export function ContactSection() {
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg mb-8">
               {lang === "es"
-                ? "Solicita acceso a NEXTECH y un integrante de nuestro equipo se contactará contigo para conocer tu operación."
-                : "Request access to NEXTECH and a team member will contact you to learn about your operation."}
+                ? "Solicita acceso a NODOTECH y un integrante de nuestro equipo se contactará contigo para conocer tu operación."
+                : "Request access to NODOTECH and a team member will contact you to learn about your operation."}
             </p>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <span>nextech@example.com</span>
