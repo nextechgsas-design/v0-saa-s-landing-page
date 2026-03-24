@@ -153,8 +153,8 @@ export function ContactSection() {
                       ? "Enviando..."
                       : "Sending..."
                     : lang === "es"
-                      ? "Solicitar demo"
-                      : "Request Demo"}
+                      ? "Agendar una cita"
+                      : "Schedule a call"}
                   {!loading && <ArrowRight size={15} />}
                 </button>
               </form>
