@@ -1,11 +1,11 @@
 "use client"
-
 import { LanguageProvider } from "@/lib/language-context"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { FlowDiagram } from "@/components/flow-diagram"
 import { ProblemSection } from "@/components/problem-section"
 import { SolutionSection } from "@/components/solution-section"
+import { PaymentsSection } from "@/components/payments-section"
 import { AutomationSection } from "@/components/automation-section"
 import { UseCasesSection } from "@/components/use-cases-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
@@ -22,6 +22,7 @@ export default function Home() {
         <FlowDiagram />
         <ProblemSection />
         <SolutionSection />
+        <PaymentsSection />
         <AutomationSection />
         <UseCasesSection />
         <HowItWorksSection />
