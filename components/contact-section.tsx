@@ -55,7 +55,7 @@ export function ContactSection() {
                 : "Request access to NODOTECH and a team member will contact you to learn about your operation."}
             </p>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-              <span>nextech@example.com</span>
+              <span>operaciones@nodonext.com</span>
               <span>Colombia — NEXTECH GLOBAL SAS</span>
             </div>
           </div>
@@ -103,7 +103,7 @@ export function ContactSection() {
                       name="email"
                       type="email"
                       required
-                      placeholder={lang === "es" ? "tu@empresa.com" : "you@company.com"}
+                      placeholder="operaciones@nodonext.com"
                       value={form.email}
                       onChange={handleChange}
                       className={inputClass}

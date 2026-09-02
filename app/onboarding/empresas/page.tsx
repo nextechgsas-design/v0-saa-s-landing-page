@@ -182,7 +182,7 @@ export default function OnboardingEmpresas() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <FormField label="Correo electrónico" required>
-            <TextInput type="email" value={form.correo} onChange={setField("correo")} placeholder="correo@empresa.com" />
+            <TextInput type="email" value={form.correo} onChange={setField("correo")} placeholder="operaciones@nodonext.com" />
           </FormField>
           <FormField label="Número de teléfono" required>
             <TextInput type="tel" value={form.telefono} onChange={setField("telefono")} placeholder="+57 300 000 0000" />
