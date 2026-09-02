@@ -9,6 +9,7 @@ export function Navbar() {
   const { lang, setLang } = useLanguage()
 
   const navLinks = [
+    { label: "USDT → COP", href: "#liquidez" },
     { label: lang === "es" ? "Solución" : "Solution", href: "#solucion" },
     { label: lang === "es" ? "Casos de uso" : "Use Cases", href: "#casos" },
     { label: lang === "es" ? "Cómo funciona" : "How It Works", href: "#como-funciona" },

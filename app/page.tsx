@@ -20,11 +20,11 @@ export default function Home() {
       <main>
         <Navbar />
         <HeroSection />
+        <OtcLiquiditySection />
         <FlowDiagram />
         <ProblemSection />
         <SolutionSection />
         <PaymentsSection />
-        <OtcLiquiditySection />
         <AutomationSection />
         <UseCasesSection />
         <HowItWorksSection />
