@@ -1,0 +1,3 @@
+{
+  "installCommand": "npm install @supabase/supabase-js && npm install"
+}
